@@ -18,7 +18,7 @@ public:
             x = x/10;
         }
         
-        if(negFlag) output = -1*;
+        if(negFlag) output = -1*output;
         
         return output;
     }
