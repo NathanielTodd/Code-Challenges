@@ -2,24 +2,17 @@ class Solution {
 public:
     int reverse(int x) {
         
-        int remainder = 0;
-        int output = 0;
-        bool negFlag = false;
+        int rem = 0;
+        int out = 0;
         
-        if(x==0) return 0;
-        else if(x<0){
-            negFlag = true;
-            x = -1*x;
-        }
-        
-        while(x>0){
-            remainder = x%10;
-            output = output*10 + remainder;
+        while(x!=0){
+            rem = x%10;
+            if (out > INT_MAX/10 || (out == INT_MAX / 10 && rem > 7)) return 0;
+            if (out < INT_MIN/10 || (out == INT_MIN / 10 && rem < -8)) return 0;
             x = x/10;
+            out = 10 * out + rem;
         }
         
-        if(negFlag) output = -1*output;
-        
-        return output;
+        return out;
     }
 };
