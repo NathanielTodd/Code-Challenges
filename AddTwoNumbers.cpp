@@ -1,3 +1,11 @@
+// Description:
+//   You are given two non-empty linked lists representing two non-negative integers.
+//   The digits are stored in reverse order and each of their nodes contain a single digit.
+//   Add the two numbers and return it as a linked list.
+
+//   You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -14,7 +22,7 @@ public:
         if (l2 == NULL) return l1;
         
         ListNode* head = new ListNode(0);
-        ListNode* curr = new ListNode(0);      
+        ListNode* curr = new ListNode(0);
         int val1, val2;
         
         //Set current next to solution head
@@ -27,7 +35,7 @@ public:
             //but enetered loop so more digits exist
             //need to initialize next and iterate
             if(curr->next==NULL){
-                curr->next = new ListNode(0); 
+                curr->next = new ListNode(0);
             }
             curr = curr->next;
             
