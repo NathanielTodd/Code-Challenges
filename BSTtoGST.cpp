@@ -23,10 +23,6 @@
  * };
  */
 
-//naive?
-//Runs in O(N) where n is the number of nodes
-//explain
-
 class Solution {
 public:
     
